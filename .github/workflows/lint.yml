@@ -27,7 +27,7 @@ jobs:
         run: npm ci
 
       - name: Run Prettier
-        run: npm run format 
+        run: npm run format:check || (echo "Prettier found formatting issues. Please run 'npm run format:fix' locally to fix them." && exit 1)
         
       - name: Run ESLint
-        run: npm run lint        
+        run: npm run lint
