@@ -1,7 +1,7 @@
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
 
-const mytvarianle = 'hola';
+let hola: string = 'hola';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
